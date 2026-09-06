@@ -1,78 +1,228 @@
----
-layout: default
-title: Home
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-# Shuyue Chen
+    <title>Your Name</title>
 
-<div class="hero">
+    <meta
+        name="description"
+        content="Personal academic website of Your Name."
+    >
 
-<img src="https://images.unsplash.com/photo-1461360228754-6e81c478b882?auto=format&fit=crop&w=1600&q=80" alt="Historical library">
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-</div>
+<body>
 
-<div class="intro">
+<header class="site-header">
+    <div class="site-container header-inner">
 
-I write about history, culture, cities, historical memory, and theory.
+        <a href="index.html" class="site-name">
+            Your Name
+        </a>
 
-This website is a space for essays, research notes, reading reflections, and unfinished ideas.
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="projects.html">Projects</a>
+            <a href="notes.html">Notes</a>
+        </nav>
 
-</div>
+    </div>
+</header>
 
-## Essays
 
-{% for essay in site.essays reversed limit:3 %}
+<main>
 
-<div class="entry">
+    <section class="intro">
+        <div class="site-container">
 
-<h3>
-<a href="{{ essay.url | relative_url }}">
-{{ essay.title }}
-</a>
-</h3>
+            <p class="eyebrow">Academic website</p>
 
-<div class="date">
-{{ essay.date | date: "%B %-d, %Y" }}
-</div>
+            <h1>Your Name</h1>
 
-<p>{{ essay.description }}</p>
+            <p class="intro-text">
+                Your short academic description goes here.
+                This should be approximately one or two sentences.
+            </p>
 
-</div>
+        </div>
+    </section>
 
-{% endfor %}
 
-[View all essays →]({{ '/essays/' | relative_url }})
+    <section class="section">
+        <div class="site-container narrow">
 
-## Recent Notes
+            <h2>About</h2>
 
-{% for note in site.notes reversed limit:5 %}
+            <p>
+                Write your 100–150 word biography here. Introduce your
+                academic background, current position, principal interests,
+                and the broader questions that guide your work.
+            </p>
 
-<div class="entry">
+            <p>
+                You can use a second paragraph if necessary. Keep the prose
+                direct and relatively compact.
+            </p>
 
-<h3>
-<a href="{{ note.url | relative_url }}">
-{{ note.title }}
-</a>
-</h3>
+        </div>
+    </section>
 
-<div class="date">
-{{ note.date | date: "%B %-d, %Y" }}
-</div>
 
-</div>
+    <section class="section">
+        <div class="site-container narrow">
 
-{% endfor %}
+            <h2>Research interests</h2>
 
-[View all notes →]({{ '/notes/' | relative_url }})
+            <p>
+                Research area · Research area · Research area ·
+                Research area
+            </p>
 
-## Research
+        </div>
+    </section>
 
-My interests include:
 
-- History
-- Cultural Memory
-- Urban History
-- Historical Theory
-- Modernity
+    <section class="section">
+        <div class="site-container">
 
-[Learn more about my research →]({{ '/research/' | relative_url }})
+            <div class="section-heading">
+                <h2>Selected research</h2>
+
+                <a href="research.html" class="section-link">
+                    View all research →
+                </a>
+            </div>
+
+
+            <article class="list-item">
+
+                <p class="item-meta">
+                    2026 · Journal / Publication type
+                </p>
+
+                <h3>
+                    Title of Research Paper
+                </h3>
+
+                <p>
+                    A short description of the paper or project.
+                </p>
+
+                <a href="research.html">
+                    Read more →
+                </a>
+
+            </article>
+
+
+            <article class="list-item">
+
+                <p class="item-meta">
+                    2025 · Research
+                </p>
+
+                <h3>
+                    Another Research Project
+                </h3>
+
+                <p>
+                    A short description of the project.
+                </p>
+
+                <a href="research.html">
+                    Read more →
+                </a>
+
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="site-container">
+
+            <div class="section-heading">
+                <h2>Selected notes</h2>
+
+                <a href="notes.html" class="section-link">
+                    View all notes →
+                </a>
+            </div>
+
+
+            <article class="list-item">
+
+                <p class="item-meta">
+                    September 2026
+                </p>
+
+                <h3>
+                    Title of a Note
+                </h3>
+
+                <p>
+                    A short description of the note.
+                </p>
+
+                <a href="notes/note-01.html">
+                    Read note →
+                </a>
+
+            </article>
+
+        </div>
+    </section>
+
+
+    <section class="section">
+        <div class="site-container narrow">
+
+            <h2>Contact</h2>
+
+            <p>
+                Email:
+                <a href="mailto:your@email.com">
+                    your@email.com
+                </a>
+            </p>
+
+            <p>
+                <a href="#" target="_blank" rel="noopener">
+                    Google Scholar
+                </a>
+                ·
+                <a href="#" target="_blank" rel="noopener">
+                    ORCID
+                </a>
+                ·
+                <a href="#" target="_blank" rel="noopener">
+                    GitHub
+                </a>
+            </p>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="site-container">
+
+        <p>
+            © 2026 Your Name
+        </p>
+
+    </div>
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
