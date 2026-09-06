@@ -1,0 +1,26 @@
+title: "Shuyue Chen"
+description: "Academic website of Shuyue Chen"
+url: "https://shuyue_chen.github.io"
+
+markdown: kramdown
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  notes:
+    output: true
+    permalink: /notes/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+
+  - scope:
+      path: ""
+      type: "notes"
+    values:
+      layout: "note"
