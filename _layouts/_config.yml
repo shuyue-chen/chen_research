@@ -1,0 +1,15 @@
+title: Shuyue Chen
+description: History, Humanities, and Cultural Theory
+
+markdown: kramdown
+
+permalink: /:categories/:title/
+
+collections:
+  essays:
+    output: true
+    permalink: /essays/:name/
+
+  notes:
+    output: true
+    permalink: /notes/:name/
