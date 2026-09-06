@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Your Name</title>
+    <title>Shuyue Chen</title>
 
     <meta
         name="description"
-        content="Personal academic website of Your Name."
+        content="Personal academic website of Shuyue Chen."
     >
 
     <link rel="stylesheet" href="css/style.css">
@@ -20,7 +20,7 @@
     <div class="site-container header-inner">
 
         <a href="index.html" class="site-name">
-            Your Name
+            Shuyue Chen
         </a>
 
         <nav class="site-nav" aria-label="Main navigation">
@@ -215,7 +215,7 @@
     <div class="site-container">
 
         <p>
-            © 2026 Your Name
+            © 2026 Shuyue Chen
         </p>
 
     </div>
