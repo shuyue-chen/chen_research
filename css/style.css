@@ -168,10 +168,32 @@ main {
    7. HOME INTRODUCTION
    --------------------------------------------------------- */
 
-.hero {
-    max-width: 780px;
+/*
+   Two-column introduction:
+   text on the left, portrait on the right.
+*/
 
-    margin-bottom: 120px;
+.hero {
+    max-width: var(--max-width);
+
+    margin: 0 auto 120px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px;
+
+    column-gap: 80px;
+
+    align-items: start;
+}
+
+
+/* Introduction text */
+
+.hero-text {
+    max-width: 720px;
 }
 
 .hero h1 {
@@ -201,6 +223,26 @@ main {
     line-height: 1.85;
 }
 
+
+/* Portrait */
+
+.hero-photo {
+    width: 100%;
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border: 1px solid var(--rule);
+}
 
 /* ---------------------------------------------------------
    8. SECTION HEADINGS
