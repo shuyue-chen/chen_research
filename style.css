@@ -163,15 +163,34 @@ main {
         120px;
 }
 
-
 /* ---------------------------------------------------------
    7. HOME INTRODUCTION
    --------------------------------------------------------- */
 
 .hero {
-    max-width: 780px;
+    max-width: var(--max-width);
 
-    margin-bottom: 120px;
+    margin:
+        0
+        auto
+        120px;
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        280px;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+/* Text side */
+
+.hero-text {
+    max-width: 720px;
 }
 
 .hero h1 {
@@ -201,6 +220,25 @@ main {
     line-height: 1.85;
 }
 
+
+/* Photograph */
+
+.hero-photo {
+    width: 100%;
+}
+
+.hero-photo img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    border: 1px solid var(--rule);
+}
 
 /* ---------------------------------------------------------
    8. SECTION HEADINGS
@@ -476,9 +514,139 @@ main {
     text-decoration: none;
 }
 
+/* ---------------------------------------------------------
+   15. INDIVIDUAL RESEARCH / PROJECT / NOTE PAGES
+   --------------------------------------------------------- */
+
+.individual-page {
+    max-width: var(--reading-width);
+
+    margin: 0 auto;
+}
+
+
+/* Small category label */
+
+.item-type {
+    margin:
+        0
+        0
+        18px;
+
+    color: var(--accent);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.68rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.14em;
+
+    text-transform: uppercase;
+}
+
+
+/* Individual page title */
+
+.individual-page h1 {
+    margin:
+        0
+        0
+        16px;
+
+    font-size: 2.4rem;
+
+    font-weight: normal;
+
+    line-height: 1.15;
+}
+
+
+/* Date */
+
+.individual-page .item-date {
+    margin-bottom: 42px;
+}
+
+
+/* Short introduction */
+
+.individual-page .intro {
+    margin:
+        0
+        0
+        48px;
+
+    color: var(--ink-soft);
+
+    font-size: 1.15rem;
+
+    line-height: 1.75;
+}
+
+
+/* Main article */
+
+.article-content {
+    margin-top: 48px;
+}
+
+.article-content h2 {
+    margin:
+        60px
+        0
+        22px;
+
+    font-size: 1.3rem;
+
+    font-weight: normal;
+
+    line-height: 1.3;
+}
+
+.article-content p {
+    max-width: var(--reading-width);
+
+    margin:
+        0
+        0
+        25px;
+
+    color: var(--ink-soft);
+
+    line-height: 1.85;
+}
+
+
+/* Back to Research / Projects / Notes */
+
+.back-link {
+    margin-top: 80px;
+
+    padding-top: 24px;
+
+    border-top: 1px solid var(--rule);
+}
+
+.back-link a {
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
 
 /* ---------------------------------------------------------
-   15. FOOTER
+   16. FOOTER
    --------------------------------------------------------- */
 
 footer {
@@ -507,7 +675,7 @@ footer {
 
 
 /* ---------------------------------------------------------
-   16. SUBTLE NOTEBOOK DETAIL
+   17. SUBTLE NOTEBOOK DETAIL
    --------------------------------------------------------- */
 
 /*
@@ -537,7 +705,7 @@ main::before {
 
 
 /* ---------------------------------------------------------
-   17. MOBILE
+   18. MOBILE
    --------------------------------------------------------- */
 
 @media (max-width: 700px) {
@@ -571,8 +739,20 @@ main::before {
     }
 
     .hero {
-        margin-bottom: 85px;
-    }
+    grid-template-columns: 1fr;
+
+    gap: 42px;
+
+    margin-bottom: 85px;
+   }
+   
+   .hero-text {
+       max-width: none;
+   }
+   
+   .hero-photo {
+       max-width: 260px;
+   }
 
     .hero h1 {
         font-size: 2.25rem;
