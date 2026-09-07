@@ -181,7 +181,7 @@ main {
         minmax(0, 1fr)
         280px;
 
-    gap: 80px;
+    gap: 60px;
 
     align-items: start;
 }
