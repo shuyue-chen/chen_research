@@ -1,3 +1,4 @@
+```css
 /* =========================================================
    PERSONAL ACADEMIC WEBSITE
    Humanity / History / Digital Notebook
@@ -24,6 +25,9 @@
 
     --max-width: 1120px;
     --reading-width: 720px;
+
+    /* Master horizontal alignment */
+    --page-padding: 42px;
 }
 
 
@@ -59,7 +63,34 @@ body {
 
 
 /* ---------------------------------------------------------
-   3. LINKS
+   3. UNIVERSAL PAGE CONTAINER
+   --------------------------------------------------------- */
+
+/*
+   This is the most important part.
+
+   Header, main, and footer all use exactly the same
+   max-width and horizontal padding.
+
+   Therefore their left edges always align.
+*/
+
+.site-header,
+main,
+footer {
+    width: 100%;
+    max-width: var(--max-width);
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: var(--page-padding);
+    padding-right: var(--page-padding);
+}
+
+
+/* ---------------------------------------------------------
+   4. LINKS
    --------------------------------------------------------- */
 
 a {
@@ -69,6 +100,7 @@ a {
 
 a:hover {
     color: var(--ink);
+
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 4px;
@@ -76,22 +108,16 @@ a:hover {
 
 
 /* ---------------------------------------------------------
-   4. SITE HEADER
+   5. SITE HEADER
    --------------------------------------------------------- */
 
 .site-header {
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-
-    padding:
-        46px
-        42px
-        0;
+    padding-top: 46px;
+    padding-bottom: 0;
 }
 
 
-/* Your name in the upper-left */
+/* Name */
 
 .site-name {
     font-family:
@@ -103,13 +129,12 @@ a:hover {
     font-weight: normal;
 
     letter-spacing: 0.01em;
-
     line-height: 1.3;
 }
 
 
 /* ---------------------------------------------------------
-   5. NAVIGATION
+   6. NAVIGATION
    --------------------------------------------------------- */
 
 .site-nav {
@@ -128,51 +153,43 @@ a:hover {
         sans-serif;
 
     font-size: 0.70rem;
-
     letter-spacing: 0.12em;
     text-transform: uppercase;
 }
 
 .site-nav a {
     color: var(--ink-soft);
-
     text-decoration: none;
-
-    transition: none;
 }
 
 .site-nav a:hover {
     color: var(--accent-dark);
-
     text-decoration: none;
 }
 
 
 /* ---------------------------------------------------------
-   6. MAIN CONTENT
+   7. MAIN CONTENT
    --------------------------------------------------------- */
 
 main {
-    max-width: var(--max-width);
+    position: relative;
 
-    margin: 0 auto;
-
-    padding:
-        80px
-        42px
-        100px;
+    padding-top: 80px;
+    padding-bottom: 100px;
 }
 
+
 /* ---------------------------------------------------------
-   7. HOME INTRODUCTION
+   8. HOME INTRODUCTION
    --------------------------------------------------------- */
 
 .hero {
-    max-width: var(--max-width);
+    width: 100%;
 
     margin:
-        auto
-        auto
+        0
+        0
         60px;
 
     display: grid;
@@ -190,6 +207,7 @@ main {
 /* Text side */
 
 .hero-text {
+    width: 100%;
     max-width: 720px;
 }
 
@@ -216,7 +234,6 @@ main {
     color: var(--ink-soft);
 
     font-size: 1.08rem;
-
     line-height: 1.85;
 }
 
@@ -228,24 +245,28 @@ main {
 }
 
 .hero-photo img {
-   display: block;
+    display: block;
 
-   width: 100%;
-   height: auto;
+    width: 100%;
+    height: auto;
 
-   aspect-ratio: 4 / 5;
+    aspect-ratio: 4 / 5;
 
-   object-fit: cover;
-   margin-bottom: 0;
+    object-fit: cover;
 
-   border: 1px solid var(--rule);
+    margin: 0;
+
+    border: 1px solid var(--rule);
 }
 
+
 /* ---------------------------------------------------------
-   8. SECTION HEADINGS
+   9. SECTION HEADINGS
    --------------------------------------------------------- */
 
 .section {
+    width: 100%;
+
     margin-bottom: 115px;
 }
 
@@ -265,14 +286,12 @@ main {
 }
 
 
-/*
-   Small visual marker before section headings.
-   This is deliberately subtle — more notebook/catalogue
-   than decorative.
-*/
+/* Small visual marker */
 
 .section h2::before {
     content: "—";
+
+    display: inline-block;
 
     margin-right: 12px;
 
@@ -281,13 +300,17 @@ main {
 
 
 /* ---------------------------------------------------------
-   9. PAGE TITLES
+   10. PAGE TITLES
    --------------------------------------------------------- */
 
 .page-title {
+    width: 100%;
     max-width: var(--reading-width);
 
-    margin-bottom: 95px;
+    margin:
+        0
+        0
+        95px;
 }
 
 .page-title h1 {
@@ -304,13 +327,13 @@ main {
 
 
 /* ---------------------------------------------------------
-   10. INDEX ITEMS
-   Research / Projects / Notes
+   11. INDEX ITEMS
    --------------------------------------------------------- */
 
 .item {
     position: relative;
 
+    width: 100%;
     max-width: 820px;
 
     padding:
@@ -337,12 +360,11 @@ main {
     margin-bottom: 5px;
 
     font-size: 1.15rem;
-
     line-height: 1.45;
 }
 
 
-/* Date / catalogue information */
+/* Date */
 
 .item-date {
     color: var(--ink-faint);
@@ -360,9 +382,10 @@ main {
 }
 
 
-/* Short descriptions */
+/* Description */
 
 .item-description {
+    width: 100%;
     max-width: 700px;
 
     margin:
@@ -373,13 +396,12 @@ main {
     color: var(--ink-soft);
 
     font-size: 0.96rem;
-
     line-height: 1.7;
 }
 
 
 /* ---------------------------------------------------------
-   11. READ MORE LINKS
+   12. READ MORE LINKS
    --------------------------------------------------------- */
 
 .read-more {
@@ -403,43 +425,39 @@ main {
 
 .read-more:hover {
     color: var(--ink);
-
     text-decoration: none;
 }
 
+
 /* ---------------------------------------------------------
-   12. IMAGES
+   13. IMAGES
    --------------------------------------------------------- */
 
 .cover-image {
     display: block;
 
     width: 100%;
-
     max-width: 720px;
 
     height: auto;
 
-    margin:58px 0 22px 0;
-
-    /*
-       Slightly archival feeling without filters or
-       artificial "vintage" effects.
-    */
+    margin:
+        58px
+        0
+        22px;
 
     border: 1px solid var(--rule);
 }
 
 
 /* ---------------------------------------------------------
-   13. EXTERNAL LINKS
+   14. EXTERNAL LINKS
    --------------------------------------------------------- */
 
 .external-link {
     display: inline-block;
 
     margin-top: 10px;
-
     padding-bottom: 3px;
 
     border-bottom: 1px solid var(--accent);
@@ -458,22 +476,35 @@ main {
 
 .external-link:hover {
     border-color: var(--ink);
-
     text-decoration: none;
 }
 
+
 /* ---------------------------------------------------------
-   14. INDIVIDUAL RESEARCH / PROJECT / NOTE PAGES
+   15. INDIVIDUAL PAGES
    --------------------------------------------------------- */
 
+/*
+   IMPORTANT:
+
+   Do NOT use margin: 0 auto here.
+
+   That centers the article.
+
+   margin-left: 0 guarantees that the article begins
+   on the same left edge as the page title and sections.
+*/
+
 .individual-page {
+    width: 100%;
     max-width: var(--reading-width);
 
-    margin: 0 auto;
+    margin-left: 0;
+    margin-right: auto;
 }
 
 
-/* Small category label */
+/* Category */
 
 .item-type {
     margin:
@@ -521,7 +552,7 @@ main {
 }
 
 
-/* Short introduction */
+/* Introduction */
 
 .individual-page .intro {
     margin:
@@ -537,9 +568,14 @@ main {
 }
 
 
-/* Main article */
+/* ---------------------------------------------------------
+   16. ARTICLE CONTENT
+   --------------------------------------------------------- */
 
 .article-content {
+    width: 100%;
+    max-width: var(--reading-width);
+
     margin-top: 48px;
 }
 
@@ -557,6 +593,7 @@ main {
 }
 
 .article-content p {
+    width: 100%;
     max-width: var(--reading-width);
 
     margin:
@@ -570,9 +607,13 @@ main {
 }
 
 
-/* Back to Research / Projects / Notes */
+/* ---------------------------------------------------------
+   17. BACK LINK
+   --------------------------------------------------------- */
 
 .back-link {
+    width: 100%;
+
     margin-top: 80px;
 
     padding-top: 24px;
@@ -593,19 +634,14 @@ main {
     text-transform: uppercase;
 }
 
+
 /* ---------------------------------------------------------
-   15. FOOTER
+   18. FOOTER
    --------------------------------------------------------- */
 
 footer {
-    max-width: var(--max-width);
-
-    margin: 0 auto;
-
-    padding:
-        38px
-        42px
-        38px;
+    padding-top: 38px;
+    padding-bottom: 38px;
 
     border-top: 1px solid var(--rule);
 
@@ -623,26 +659,20 @@ footer {
 
 
 /* ---------------------------------------------------------
-   16. SUBTLE NOTEBOOK DETAIL
+   19. NOTEBOOK DETAIL
    --------------------------------------------------------- */
-
-/*
-   A very faint vertical line gives the site a slight
-   notebook / archival-paper character.
-
-   It is intentionally almost invisible.
-*/
 
 main::before {
     content: "";
 
     position: absolute;
 
+    top: 0;
+    bottom: 0;
+
     left: 50%;
 
     width: 1px;
-
-    height: 100%;
 
     background: var(--rule-light);
 
@@ -653,21 +683,28 @@ main::before {
 
 
 /* ---------------------------------------------------------
-   18. MOBILE
+   20. MOBILE
    --------------------------------------------------------- */
 
 @media (max-width: 700px) {
+
+    :root {
+        --page-padding: 22px;
+    }
 
     body {
         font-size: 16px;
     }
 
+
+    /* Header */
+
     .site-header {
-        padding:
-            30px
-            22px
-            0;
+        padding-top: 30px;
     }
+
+
+    /* Navigation */
 
     .site-nav {
         gap: 16px;
@@ -679,28 +716,32 @@ main::before {
         font-size: 0.64rem;
     }
 
+
+    /* Main */
+
     main {
-        padding:
-            60px
-            22px
-            80px;
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
 
+
+    /* Hero */
+
     .hero {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
 
-    gap: 42px;
+        gap: 42px;
 
-    margin-bottom: 85px;
-   }
-   
-   .hero-text {
-       max-width: none;
-   }
-   
-   .hero-photo {
-       max-width: 260px;
-   }
+        margin-bottom: 85px;
+    }
+
+    .hero-text {
+        max-width: none;
+    }
+
+    .hero-photo {
+        max-width: 260px;
+    }
 
     .hero h1 {
         font-size: 2.25rem;
@@ -710,9 +751,15 @@ main::before {
         font-size: 1rem;
     }
 
+
+    /* Sections */
+
     .section {
         margin-bottom: 80px;
     }
+
+
+    /* Page titles */
 
     .page-title {
         margin-bottom: 70px;
@@ -721,6 +768,9 @@ main::before {
     .page-title h1 {
         font-size: 2.25rem;
     }
+
+
+    /* Publications / Projects */
 
     .publication,
     .project {
@@ -732,6 +782,9 @@ main::before {
         font-size: 1.45rem;
     }
 
+
+    /* Images */
+
     .cover-image {
         margin:
             28px
@@ -739,10 +792,12 @@ main::before {
             32px;
     }
 
+
+    /* Footer */
+
     footer {
-        padding:
-            30px
-            22px
-            45px;
+        padding-top: 30px;
+        padding-bottom: 45px;
     }
 }
+```
