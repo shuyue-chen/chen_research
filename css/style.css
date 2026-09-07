@@ -613,8 +613,20 @@ main::before {
     }
 
     .hero {
-        margin-bottom: 85px;
-    }
+    margin-bottom: 85px;
+
+    grid-template-columns: 1fr;
+
+    row-gap: 42px;
+   }
+
+   .hero-text {
+    max-width: none;
+   }
+   
+   .hero-photo {
+       max-width: 260px;
+   }
 
     .hero h1 {
         font-size: 2.25rem;
