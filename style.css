@@ -655,33 +655,8 @@ footer {
     letter-spacing: 0.05em;
 }
 
-
 /* ---------------------------------------------------------
-   19. NOTEBOOK DETAIL
-   --------------------------------------------------------- */
-
-main::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-
-    left: 50%;
-
-    width: 1px;
-
-    background: var(--rule-light);
-
-    opacity: 0.25;
-
-    pointer-events: none;
-}
-
-
-/* ---------------------------------------------------------
-   20. MOBILE
+   19. MOBILE
    --------------------------------------------------------- */
 
 @media (max-width: 700px) {
