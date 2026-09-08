@@ -75,7 +75,8 @@ body {
 */
 
 .site-header,
-main {
+main,
+footer {
     width: 100%;
     max-width: var(--max-width);
 
@@ -632,38 +633,15 @@ main {
     text-transform: uppercase;
 }
 
-
 /* ---------------------------------------------------------
    18. FOOTER
    --------------------------------------------------------- */
 
-/*
-   The footer itself spans the full browser width.
-
-   The inner container uses the same max-width and
-   horizontal padding as the main content.
-
-   This creates perfect left alignment while allowing
-   the horizontal rule to extend across the page.
-*/
-
-.site-footer {
-    width: 100%;
+footer {
+    padding-top: 38px;
+    padding-bottom: 38px;
 
     border-top: 1px solid var(--rule);
-}
-
-.footer-inner {
-    width: 100%;
-    max-width: var(--max-width);
-
-    margin-left: auto;
-    margin-right: auto;
-
-    padding:
-        38px
-        var(--page-padding)
-        38px;
 
     color: var(--ink-faint);
 
@@ -676,6 +654,7 @@ main {
 
     letter-spacing: 0.05em;
 }
+
 
 /* ---------------------------------------------------------
    19. NOTEBOOK DETAIL
@@ -813,12 +792,9 @@ main::before {
 
 
     /* Footer */
-   .site-footer {
-    width: 100%;
-   }
-   .footer-inner {
-       padding-top: 30px;
-       padding-bottom: 45px;
+   footer {
+    padding-top: 30px;
+    padding-bottom: 45px;
    }
 
 }
