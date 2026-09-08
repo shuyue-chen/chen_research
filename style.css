@@ -206,6 +206,7 @@ main {
 
 .hero-photo {
     width: 280px;
+    max-width: 100%;
     justify-self: end;
 }
 
@@ -632,9 +633,11 @@ footer {
     }
 
     body {
+        margin: 0;
+        padding: 0 var(--page-padding);
+
         font-size: 16px;
     }
-
 
     /* Header */
 
@@ -642,19 +645,14 @@ footer {
         padding-top: 30px;
     }
 
-
     /* Navigation */
 
     .site-nav {
         gap: 16px;
-
         margin-top: 22px;
-
         padding-bottom: 17px;
-
         font-size: 0.64rem;
     }
-
 
     /* Main */
 
@@ -663,14 +661,11 @@ footer {
         padding-bottom: 80px;
     }
 
-
     /* Hero */
 
     .hero {
         grid-template-columns: 1fr;
-
         gap: 42px;
-
         margin-bottom: 85px;
     }
 
@@ -679,7 +674,9 @@ footer {
     }
 
     .hero-photo {
-        max-width: 260px;
+        width: 260px;
+        max-width: 100%;
+        justify-self: start;
     }
 
     .hero h1 {
@@ -690,13 +687,11 @@ footer {
         font-size: 1rem;
     }
 
-
     /* Sections */
 
     .section {
         margin-bottom: 80px;
     }
-
 
     /* Page titles */
 
@@ -708,34 +703,18 @@ footer {
         font-size: 2.25rem;
     }
 
-
-    /* Publications / Projects */
-
-    .publication,
-    .project {
-        margin-bottom: 75px;
-    }
-
-    .publication h2,
-    .project h2 {
-        font-size: 1.45rem;
-    }
-
-
     /* Images */
 
     .cover-image {
-        margin:
-            28px
-            0
-            32px;
+        width: 100%;
+        max-width: 100%;
+        margin: 28px 0 32px;
     }
 
-
     /* Footer */
-   footer {
-    padding-top: 30px;
-    padding-bottom: 45px;
-   }
 
+    footer {
+        padding-top: 30px;
+        padding-bottom: 45px;
+    }
 }
