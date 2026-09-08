@@ -142,7 +142,6 @@ main {
 
     padding-top: 80px;
     padding-bottom: 100px;
-   margin: 27px;
 }
 
 
@@ -157,7 +156,7 @@ main {
         0
         0
         60px;
-
+   
     display: grid;
 
     grid-template-columns:
@@ -174,7 +173,7 @@ main {
 
 .hero-text {
     width: 100%;
-    max-width: 720px;
+    max-width: 920px;
 }
 
 .hero h1 {
@@ -193,7 +192,7 @@ main {
 }
 
 .hero p {
-    max-width: 720px;
+    max-width: 920px;
 
     margin: 0;
 
@@ -202,7 +201,6 @@ main {
     font-size: 1.08rem;
     line-height: 1.85;
 }
-
 
 /* Photograph */
 
@@ -220,7 +218,7 @@ main {
 
     object-fit: cover;
 
-    margin: 0 auto;
+    margin: 0;
 
     border: 1px solid var(--rule);
 }
