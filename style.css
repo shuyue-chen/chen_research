@@ -60,34 +60,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-
-/* ---------------------------------------------------------
-   3. UNIVERSAL PAGE CONTAINER
-   --------------------------------------------------------- */
-
-/*
-   This is the most important part.
-
-   Header, main, and footer all use exactly the same
-   max-width and horizontal padding.
-
-   Therefore their left edges always align.
-*/
-
-.site-header,
-main,
-footer {
-    width: 100%;
-    max-width: var(--max-width);
-
-    margin-left: auto;
-    margin-right: auto;
-
-    padding-left: var(--page-padding);
-    padding-right: var(--page-padding);
-}
-
-
 /* ---------------------------------------------------------
    4. LINKS
    --------------------------------------------------------- */
